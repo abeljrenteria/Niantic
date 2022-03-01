@@ -1,4 +1,4 @@
-Abel Renteria <br>
+##Abel Renteria <br>
 abeljrenteria@gmail.com | [Linkedin](https://linkedin.com/in/abeljrenteria) | [Github](https://github.com/abeljrenteria)
 
 
