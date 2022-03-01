@@ -1,6 +1,7 @@
 ## Abel Renteria <br>
 abeljrenteria@gmail.com | [Linkedin](https://linkedin.com/in/abeljrenteria) | [Github](https://github.com/abeljrenteria)
 
+<br>
 
 ### Question 1
 Suppose this data is a SQL table called ‘PokemonStats’. In an SQL dialect you are most comfortable with, find the top 3 Pokemon in terms of total stats of each type (primary type, Type_1). Your answer should include: 1) the SQL dialect you are using; 2) The SQL query used to answer this question; 3) The returned result.
@@ -71,26 +72,37 @@ where primary_type_rank <= 3;
 | "Palkia"     | "Water"    | 680   | 1                 |
 | "Kyogre"     | "Water"    | 670   | 2                 |
 | "Manaphy"    | "Water"    | 600   | 3                 |
+<br>
 
 ### Question 2
 Imagine a new Pokemon game where you are only allowed to collect ONE type of Pokemon. Similar to other Pokemon games, your goal is to have the strongest battlers and defenders for battles and raids. Which type will you pick? Why? 
+<br>
+```sql
+SELECT type_1, 
+	ROUND(AVG(Attack + Sp_Atk + Defense + Sp_Def)) AS Avg_Total_Attack_Defense, 
+	ROUND(AVG(Attack + Sp_Atk)) AS Avg_Total_Attack, 
+	ROUND(AVG(Defense + Sp_Def)) AS Avg_Total_Defense
+FROM PokemonStats
+GROUP BY type_1 ORDER BY Avg_Total_Attack_Defense DESC LIMIT 5;
+```
+| type_1     | avg_total_attack | avg_total_attack | avg_total_defense |
+|------------|------------------|------------------|-------------------|
+| "Dragon"   | 347              | 185              | 162               |
+| "Steel"    | 346              | 147              | 199               |
+| "Rock"     | 321              | 149              | 173               |
+| "Ghost"    | 301              | 149              | 152               |
+| "Fire"     | 300              | 166              | 134               |
+
+<br>
 
 ### Question 3
 If you want to predict whether the Pokemon is a legendary Pokemon (a.k.a. predict the field isLegendary using other fields), which models would you use? List your top 3 models with pros and cons for each one.
+<br><br>
+In this case, to predict whether a Pokemon is a legendary Pokemon would require the use of a Classification ML Algorithm. Below is the list of which models could be implemented. 
+
 
 ### Question 4
 Pick one model and implement it in a language you are most comfortable with (preferably Python or R). Please do not use the ‘Catch_Rate’ field (if you are Pokemon fan you know why :). What is your in-sample classification accuracy and what fields did you end up using?
 
 Your answer should include: 1) The code of implementing the model (incl. feature processing, model fitting and cross validating); 2) The formula/description of your final model along with the accuracy number. 3) In addition to the code and the model specification, if you choose to submit a presentation/ dashboard as part of your writeup, you can present your results in any way you like. 
 
-
-
-
-
-
-
-
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
