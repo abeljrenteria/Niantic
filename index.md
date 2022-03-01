@@ -68,6 +68,16 @@ where primary_type_rank <= 3;
 | "Kyogre"     | "Water"    | 670   | 2                 |
 | "Manaphy"    | "Water"    | 600   | 3                 |
 
+### Question 2
+Imagine a new Pokemon game where you are only allowed to collect ONE type of Pokemon. Similar to other Pokemon games, your goal is to have the strongest battlers and defenders for battles and raids. Which type will you pick? Why? 
+
+### Question 3
+If you want to predict whether the Pokemon is a legendary Pokemon (a.k.a. predict the field isLegendary using other fields), which models would you use? List your top 3 models with pros and cons for each one.
+
+### Question 4
+Pick one model and implement it in a language you are most comfortable with (preferably Python or R). Please do not use the ‘Catch_Rate’ field (if you are Pokemon fan you know why :). What is your in-sample classification accuracy and what fields did you end up using?
+
+Your answer should include: 1) The code of implementing the model (incl. feature processing, model fitting and cross validating); 2) The formula/description of your final model along with the accuracy number. 3) In addition to the code and the model specification, if you choose to submit a presentation/ dashboard as part of your writeup, you can present your results in any way you like. 
 
 
 ### Markdown
