@@ -1,12 +1,23 @@
 ### Question 1
 Suppose this data is a SQL table called ‘PokemonStats’. In an SQL dialect you are most comfortable with, find the top 3 Pokemon in terms of total stats of each type (primary type, Type_1). Your answer should include: 1) the SQL dialect you are using; 2) The SQL query used to answer this question; 3) The returned result.
 
+1) PostgreSQL
+2) 
 ```sql
 SELECT * FROM (
 	SELECT name, type_1, total, ROW_NUMBER() OVER (PARTITION BY type_1 ORDER BY total DESC) AS primary_type_rank
 	FROM PokemonStats) ranks
 where primary_type_rank <= 3;
 ```
+3)
+| name      | type_1 | total | primary_type_rank |
+| ----------- | ----------- | ----------- | ----------- |
+| Genesect    | Bug         | 600         | 1           |
+| Volcarona   | Bug         | 550         | 2           |
+| Yanmega     | Bug         | 515         | 3           |
+| Yveital     | Dark        | 680         | 1           |
+| Darkrai     | Dark        | 600         | 2           |
+
 
 
 ### Markdown
