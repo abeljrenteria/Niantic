@@ -85,6 +85,7 @@ SELECT type_1,
 FROM PokemonStats
 GROUP BY type_1 ORDER BY Avg_Total_Attack_Defense DESC LIMIT 5;
 ```
+
 | type_1     | avg_total_attack | avg_total_attack | avg_total_defense |
 |------------|------------------|------------------|-------------------|
 | "Dragon"   | 347              | 185              | 162               |
