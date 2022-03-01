@@ -10,6 +10,7 @@ SELECT * FROM (
 where primary_type_rank <= 3;
 ```
 3) Outputed Table. 
+
 | name         | type_1     | total | primary_type_rank |
 |--------------|------------|-------|-------------------|
 | "Genesect"   | "Bug"      | 600   | 1                 |
