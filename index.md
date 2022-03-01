@@ -76,8 +76,9 @@ where primary_type_rank <= 3;
 
 ### Question 2
 Imagine a new Pokemon game where you are only allowed to collect ONE type of Pokemon. Similar to other Pokemon games, your goal is to have the strongest battlers and defenders for battles and raids. Which type will you pick? Why? 
-<br>
+<br><br>
 The one type of Pokemon I would only collect is Dragon. I would pick Dragon due to that type having a greater avg total attack+defense than all other types. 
+Below is the SQL query and output I used to come to this decision.
 <br>
 ```sql
 SELECT type_1, 
