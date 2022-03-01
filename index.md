@@ -1,8 +1,13 @@
-## Welcome to GitHub Pages
+### Question 1
+Suppose this data is a SQL table called ‘PokemonStats’. In an SQL dialect you are most comfortable with, find the top 3 Pokemon in terms of total stats of each type (primary type, Type_1). Your answer should include: 1) the SQL dialect you are using; 2) The SQL query used to answer this question; 3) The returned result.
 
-You can use the [editor on GitHub](https://github.com/abeljrenteria/Niantic/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+```sql
+SELECT * FROM (
+	SELECT name, type_1, total, ROW_NUMBER() OVER (PARTITION BY type_1 ORDER BY total DESC) AS primary_type_rank
+	FROM PokemonStats) ranks
+where primary_type_rank <= 3;
+```
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
